@@ -1,6 +1,8 @@
 <!--
   Decoder stormshield for Wazuh 4.3.10
   Author: Jonathan.G
+
+  This program is a free software; you can redistribute it and/or modify it under the terms of GPLv2.
 -->
 
 <decoder name="stormshield_decoder">
