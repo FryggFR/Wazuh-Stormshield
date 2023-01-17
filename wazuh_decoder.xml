@@ -32,7 +32,6 @@
     <order>startime</order>
 </decoder>
 
-<!-- TEST -->
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
     <regex>error=(\S+)</regex>
@@ -47,7 +46,7 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">address=(\S+)</regex>
+    <regex>address=(\S+)</regex>
     <order>address</order>
 </decoder>
 
@@ -56,7 +55,6 @@
     <regex>sessionid=(\S+)</regex>
     <order>sessionid</order>
 </decoder>
-<!-- END TEST -->
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
@@ -78,7 +76,7 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">ruleid=(\S+)</regex>
+    <regex>ruleid=(\S+)</regex>
     <order>ruleid</order>
 </decoder>
 
@@ -90,115 +88,115 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">srcif="(\.*)"</regex>
+    <regex>srcif="(\.*)"</regex>
     <order>srcif</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">srcifname="(\.*)"</regex>
+    <regex>srcifname="(\.*)"</regex>
     <order>srcifname</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">ipproto=(\S+)</regex>
+    <regex>ipproto=(\S+)</regex>
     <order>ipproto</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">dstif="(\.*)"</regex>
+    <regex>dstif="(\.*)"</regex>
     <order>dstif</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">dstifname="(\.*)"</regex>
+    <regex>dstifname="(\.*)"</regex>
     <order>dstifname</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">proto=(\S+)</regex>
+    <regex>proto=(\S+)</regex>
     <order>proto</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">src=(\S+)</regex>
+    <regex>src=(\S+)</regex>
     <order>src</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">srcport=(\S+)</regex>
+    <regex>srcport=(\S+)</regex>
     <order>srcport</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">srcportname="(\.*)"</regex>
+    <regex>srcportname="(\.*)"</regex>
     <order>srcportname</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">srcname=(\S+)</regex>
+    <regex>srcname=(\S+)</regex>
     <order>srcname</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">srcmac=(\S+)</regex>
+    <regex>srcmac=(\S+)</regex>
     <order>srcmac</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">dst=(\S+)</regex>
+    <regex>dst=(\S+)</regex>
     <order>dst</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">dstport=(\S+)</regex>
+    <regex>dstport=(\S+)</regex>
     <order>dstport</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">dstportname=(\S+)</regex>
+    <regex>dstportname=(\S+)</regex>
     <order>dstportname</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">dstname=(\S+)</regex>
+    <regex>dstname=(\S+)</regex>
     <order>dstname</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">dstcontinent="(\.*)"</regex>
+    <regex>dstcontinent="(\.*)"</regex>
     <order>dstcontinent</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">dstcountry="(\.*)"</regex>
+    <regex>dstcountry="(\.*)"</regex>
     <order>dstcountry</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">modsrc=(\S+)</regex>
+    <regex>modsrc=(\S+)</regex>
     <order>modsrc</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">modsrcport=(\S+)</regex>
+    <regex>modsrcport=(\S+)</regex>
     <order>modsrcport</order>
 </decoder>
 
@@ -210,19 +208,19 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">action=(\S+)</regex>
+    <regex>action=(\S+)</regex>
     <order>action</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">msg="(\.*)"</regex>
+    <regex>msg="(\.*)"</regex>
     <order>msg</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">class=(\S+)</regex>
+    <regex>class=(\S+)</regex>
     <order>class</order>
 </decoder>
 
@@ -234,25 +232,25 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">target=(\S+)</regex>
+    <regex>target=(\S+)</regex>
     <order>target</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">logtype="(\.*)"</regex>
+    <regex>logtype="(\.*)"</regex>
     <order>logtype</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">origdst=(\S+)</regex>
+    <regex>origdst=(\S+)</regex>
     <order>origdst</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">origdstport=(\S+)</regex>
+    <regex>origdstport=(\S+)</regex>
     <order>origdstport</order>
 </decoder>
 
@@ -282,7 +280,7 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">duration=(\S+)</regex>
+    <regex>duration=(\S+)</regex>
     <order>duration</order>
 </decoder>
 
