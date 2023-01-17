@@ -1,6 +1,6 @@
 <!--
   Decoder stormshield for Wazuh 4.3.10
-  By Jonathan.G (Frygg)
+  Author: Jonathan.G
 -->
 
 <decoder name="stormshield_decoder">
