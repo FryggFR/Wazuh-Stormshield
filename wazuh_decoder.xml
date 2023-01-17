@@ -4,7 +4,6 @@
 
   This program is a free software; you can redistribute it and/or modify it under the terms of GPLv2.
 -->
-
 <decoder name="stormshield_decoder">
   <prematch>id=firewall</prematch>
 </decoder>
@@ -33,6 +32,32 @@
     <order>startime</order>
 </decoder>
 
+<!-- TEST -->
+<decoder name="stormshield_decoder_1">
+    <parent>stormshield_decoder</parent>
+    <regex>error=(\S+)</regex>
+    <order>error</order>
+</decoder>
+
+<decoder name="stormshield_decoder_1">
+    <parent>stormshield_decoder</parent>
+    <regex>user="(\.*)"</regex>
+    <order>user</order>
+</decoder>
+
+<decoder name="stormshield_decoder_1">
+    <parent>stormshield_decoder</parent>
+    <regex offset="after_regex">address=(\S+)</regex>
+    <order>address</order>
+</decoder>
+
+<decoder name="stormshield_decoder_1">
+    <parent>stormshield_decoder</parent>
+    <regex>sessionid=(\S+)</regex>
+    <order>sessionid</order>
+</decoder>
+<!-- END TEST -->
+
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
     <regex>pri=(\S+)</regex>
@@ -59,7 +84,7 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex offset="after_regex">rulename="(\.*)"</regex>
+    <regex>rulename="(\.*)"</regex>
     <order>rulename</order>
 </decoder>
 
@@ -217,4 +242,52 @@
     <parent>stormshield_decoder</parent>
     <regex offset="after_regex">logtype="(\.*)"</regex>
     <order>logtype</order>
+</decoder>
+
+<decoder name="stormshield_decoder_1">
+    <parent>stormshield_decoder</parent>
+    <regex offset="after_regex">origdst=(\S+)</regex>
+    <order>origdst</order>
+</decoder>
+
+<decoder name="stormshield_decoder_1">
+    <parent>stormshield_decoder</parent>
+    <regex offset="after_regex">origdstport=(\S+)</regex>
+    <order>origdstport</order>
+</decoder>
+
+<decoder name="stormshield_decoder_1">
+    <parent>stormshield_decoder</parent>
+    <regex>rt="(\.*)"</regex>
+    <order>rt</order>
+</decoder>
+
+<decoder name="stormshield_decoder_1">
+    <parent>stormshield_decoder</parent>
+    <regex>rtname="(\.*)"</regex>
+    <order>rtname</order>
+</decoder>
+
+<decoder name="stormshield_decoder_1">
+    <parent>stormshield_decoder</parent>
+    <regex>sent=(\S+)</regex>
+    <order>sent</order>
+</decoder>
+
+<decoder name="stormshield_decoder_1">
+    <parent>stormshield_decoder</parent>
+    <regex>rcvd=(\S+)</regex>
+    <order>rcvd</order>
+</decoder>
+
+<decoder name="stormshield_decoder_1">
+    <parent>stormshield_decoder</parent>
+    <regex offset="after_regex">duration=(\S+)</regex>
+    <order>duration</order>
+</decoder>
+
+<decoder name="stormshield_decoder_1">
+    <parent>stormshield_decoder</parent>
+    <regex>sensible=(\S+)</regex>
+    <order>sensible</order>
 </decoder>
