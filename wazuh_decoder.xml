@@ -10,13 +10,14 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex>time="(\.*)"</regex>
+    <!-- <regex>time="(\.*)"</regex> -->
+	  <regex type="pcre2">time=\\?"(.*?)\\?"</regex>
     <order>time</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex>fw="(\.*)"</regex>
+    <regex type="pcre2">fw=\\?"(.*?)\\?"</regex>
     <order>fw</order>
 </decoder>
 
@@ -28,7 +29,8 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex>startime="(\.*)"</regex>
+    <!-- <regex>startime="(\.*)"</regex> -->
+	  <regex type="pcre2">startime=\\?"(.*?)\\?"</regex>
     <order>startime</order>
 </decoder>
 
@@ -40,7 +42,8 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex>user="(\.*)"</regex>
+    <!-- <regex>user="(\.*)"</regex> -->
+	  <regex type="pcre2">user=\\?"(.*?)\\?"</regex>
     <order>user</order>
 </decoder>
 
@@ -214,7 +217,8 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex>msg="(\.*)"</regex>
+    <!-- <regex>msg="(\.*)"</regex> -->
+	  <regex type="pcre2">msg=\\?"(.*?)\\?"</regex>
     <order>msg</order>
 </decoder>
 
@@ -238,7 +242,8 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex>logtype="(\.*)"</regex>
+    <!-- <regex>logtype="(\.*)"</regex> -->
+	  <regex type="pcre2">logtype=\\?"(.*?)\\?"</regex>
     <order>logtype</order>
 </decoder>
 
