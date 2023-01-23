@@ -5,14 +5,14 @@
 
   This program is a free software; you can redistribute it and/or modify it under the terms of GPLv2.
 -->
+<!-- Decoders for Stormshield -->
 <decoder name="stormshield_decoder">
   <prematch>id=firewall</prematch>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <!-- <regex>time="(\.*)"</regex> -->
-    <regex type="pcre2">time=\\?"(.*?)\\?"</regex>
+	  <regex type="pcre2">time=\\?"(.*?)\\?"</regex>
     <order>time</order>
 </decoder>
 
@@ -30,8 +30,7 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <!-- <regex>startime="(\.*)"</regex> -->
-    <regex type="pcre2">startime=\\?"(.*?)\\?"</regex>
+	  <regex type="pcre2">startime=\\?"(.*?)\\?"</regex>
     <order>startime</order>
 </decoder>
 
@@ -43,8 +42,7 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <!-- <regex>user="(\.*)"</regex> -->
-    <regex type="pcre2">user=\\?"(.*?)\\?"</regex>
+	  <regex type="pcre2">user=\\?"(.*?)\\?"</regex>
     <order>user</order>
 </decoder>
 
@@ -86,22 +84,19 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <!-- <regex>rulename="(\.*)"</regex> -->
-    <regex type="pcre2">rulename=\\?"(.*?)\\?"</regex>
+	  <regex type="pcre2">rulename=\\?"(.*?)\\?"</regex>
     <order>rulename</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <!-- <regex>srcif="(\.*)"</regex> -->
-    <regex type="pcre2">srcif=\\?"(.*?)\\?"</regex>
+	  <regex type="pcre2">srcif=\\?"(.*?)\\?"</regex>
     <order>srcif</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <!-- <regex>srcifname="(\.*)"</regex> -->
-    <regex type="pcre2">srcifname=\\?"(.*?)\\?"</regex>
+	  <regex type="pcre2">srcifname=\\?"(.*?)\\?"</regex>
     <order>srcifname</order>
 </decoder>
 
@@ -113,15 +108,13 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <!-- <regex>dstif="(\.*)"</regex> -->
-    <regex type="pcre2">dstif=\\?"(.*?)\\?"</regex>
+	  <regex type="pcre2">dstif=\\?"(.*?)\\?"</regex>
     <order>dstif</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <!-- <regex>dstifname="(\.*)"</regex> -->
-    <regex type="pcre2">dstifname=\\?"(.*?)\\?"</regex>
+	  <regex type="pcre2">dstifname=\\?"(.*?)\\?"</regex>
     <order>dstifname</order>
 </decoder>
 
@@ -223,8 +216,7 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <!-- <regex>msg="(\.*)"</regex> -->
-    <regex type="pcre2">msg=\\?"(.*?)\\?"</regex>
+	  <regex type="pcre2">msg=\\?"(.*?)\\?"</regex>
     <order>msg</order>
 </decoder>
 
@@ -260,15 +252,13 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <!-- <regex>rt="(\.*)"</regex> -->
-    <regex type="pcre2">rt=\\?"(.*?)\\?"</regex>
+	  <regex type="pcre2">rt=\\?"(.*?)\\?"</regex>
     <order>rt</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <!-- <regex>rtname="(\.*)"</regex> -->
-    <regex type="pcre2">rtname=\\?"(.*?)\\?"</regex>
+	  <regex type="pcre2">rtname=\\?"(.*?)\\?"</regex>
     <order>rtname</order>
 </decoder>
 
@@ -298,19 +288,24 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex type="pcre2">totp=\\?"(.*?)\\?"</regex>
+    <regex>service=(\.*)</regex>
+    <order>service</order>
+</decoder>
+
+<decoder name="stormshield_decoder_1">
+    <parent>stormshield_decoder</parent>
+	  <regex type="pcre2">totp=\\?"(.*?)\\?"</regex>
     <order>totp</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <regex type="pcre2">method=\\?"(.*?)\\?"</regex>
+	  <regex type="pcre2">method=\\?"(.*?)\\?"</regex>
     <order>method</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
-    <!-- <regex>logtype="(\.*)"</regex> -->
-    <regex type="pcre2">logtype=\\?"(.*?)\\?"</regex>
+	  <regex type="pcre2">logtype=\\?"(.*?)\\?"</regex>
     <order>logtype</order>
 </decoder>
