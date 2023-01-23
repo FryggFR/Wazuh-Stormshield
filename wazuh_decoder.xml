@@ -298,6 +298,18 @@
 
 <decoder name="stormshield_decoder_1">
     <parent>stormshield_decoder</parent>
+    <regex type="pcre2">totp=\\?"(.*?)\\?"</regex>
+    <order>totp</order>
+</decoder>
+
+<decoder name="stormshield_decoder_1">
+    <parent>stormshield_decoder</parent>
+    <regex type="pcre2">method=\\?"(.*?)\\?"</regex>
+    <order>method</order>
+</decoder>
+
+<decoder name="stormshield_decoder_1">
+    <parent>stormshield_decoder</parent>
     <!-- <regex>logtype="(\.*)"</regex> -->
     <regex type="pcre2">logtype=\\?"(.*?)\\?"</regex>
     <order>logtype</order>
