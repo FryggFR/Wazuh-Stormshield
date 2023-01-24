@@ -5,307 +5,312 @@
 
   This program is a free software; you can redistribute it and/or modify it under the terms of GPLv2.
 -->
-<!-- Decoders for Stormshield -->
 <decoder name="stormshield_decoder">
   <prematch>id=firewall</prematch>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-	  <regex type="pcre2">time=\\?"(.*?)\\?"</regex>
-    <order>time</order>
+  <parent>stormshield_decoder</parent>
+  <regex type="pcre2">time=\\?"(.*?)\\?"</regex>
+  <order>time</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex type="pcre2">fw=\\?"(.*?)\\?"</regex>
-    <order>fw</order>
+  <parent>stormshield_decoder</parent>
+  <regex type="pcre2">fw=\\?"(.*?)\\?"</regex>
+  <order>fw</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>tz=(\S+)</regex>
-    <order>tz</order>
+  <parent>stormshield_decoder</parent>
+  <regex>tz=(\S+)</regex>
+  <order>tz</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-	  <regex type="pcre2">startime=\\?"(.*?)\\?"</regex>
-    <order>startime</order>
+  <parent>stormshield_decoder</parent>
+  <regex type="pcre2">startime=\\?"(.*?)\\?"</regex>
+  <order>startime</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>error=(\S+)</regex>
-    <order>error</order>
+  <parent>stormshield_decoder</parent>
+  <regex>error=(\S+)</regex>
+  <order>error</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-	  <regex type="pcre2">user=\\?"(.*?)\\?"</regex>
-    <order>user</order>
+  <parent>stormshield_decoder</parent>
+  <regex type="pcre2">user=\\?"(.*?)\\?"</regex>
+  <order>user</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>address=(\S+)</regex>
-    <order>address</order>
+  <parent>stormshield_decoder</parent>
+  <regex>address=(\S+)</regex>
+  <order>address</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>sessionid=(\S+)</regex>
-    <order>sessionid</order>
+  <parent>stormshield_decoder</parent>
+  <regex>sessionid=(\S+)</regex>
+  <order>sessionid</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>pri=(\S+)</regex>
-    <order>pri</order>
+  <parent>stormshield_decoder</parent>
+  <regex>pri=(\S+)</regex>
+  <order>pri</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>confid=(\S+)</regex>
-    <order>confid</order>
+  <parent>stormshield_decoder</parent>
+  <regex>confid=(\S+)</regex>
+  <order>confid</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>slotlevel=(\S+)</regex>
-    <order>slotlevel</order>
+  <parent>stormshield_decoder</parent>
+  <regex>slotlevel=(\S+)</regex>
+  <order>slotlevel</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>ruleid=(\S+)</regex>
-    <order>ruleid</order>
+  <parent>stormshield_decoder</parent>
+  <regex>ruleid=(\S+)</regex>
+  <order>ruleid</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-	  <regex type="pcre2">rulename=\\?"(.*?)\\?"</regex>
-    <order>rulename</order>
+  <parent>stormshield_decoder</parent>
+  <regex type="pcre2">rulename=\\?"(.*?)\\?"</regex>
+  <order>rulename</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-	  <regex type="pcre2">srcif=\\?"(.*?)\\?"</regex>
-    <order>srcif</order>
+  <parent>stormshield_decoder</parent>
+  <regex type="pcre2">srcif=\\?"(.*?)\\?"</regex>
+  <order>srcif</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-	  <regex type="pcre2">srcifname=\\?"(.*?)\\?"</regex>
-    <order>srcifname</order>
+  <parent>stormshield_decoder</parent>
+  <regex type="pcre2">srcifname=\\?"(.*?)\\?"</regex>
+  <order>srcifname</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>ipproto=(\S+)</regex>
-    <order>ipproto</order>
+  <parent>stormshield_decoder</parent>
+  <regex>ipproto=(\S+)</regex>
+  <order>ipproto</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-	  <regex type="pcre2">dstif=\\?"(.*?)\\?"</regex>
-    <order>dstif</order>
+  <parent>stormshield_decoder</parent>
+  <regex type="pcre2">dstif=\\?"(.*?)\\?"</regex>
+  <order>dstif</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-	  <regex type="pcre2">dstifname=\\?"(.*?)\\?"</regex>
-    <order>dstifname</order>
+  <parent>stormshield_decoder</parent>
+  <regex type="pcre2">dstifname=\\?"(.*?)\\?"</regex>
+  <order>dstifname</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>proto=(\S+)</regex>
-    <order>proto</order>
+  <parent>stormshield_decoder</parent>
+  <regex>proto=(\S+)</regex>
+  <order>proto</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>src=(\S+)</regex>
-    <order>src</order>
+  <parent>stormshield_decoder</parent>
+  <regex>src=(\S+)</regex>
+  <order>src</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>srcport=(\S+)</regex>
-    <order>srcport</order>
+  <parent>stormshield_decoder</parent>
+  <regex>srcport=(\S+)</regex>
+  <order>srcport</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>srcportname="(\.*)"</regex>
-    <order>srcportname</order>
+  <parent>stormshield_decoder</parent>
+  <regex>srcportname="(\.*)"</regex>
+  <order>srcportname</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>srcname=(\S+)</regex>
-    <order>srcname</order>
+  <parent>stormshield_decoder</parent>
+  <regex>srcname=(\S+)</regex>
+  <order>srcname</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>srcmac=(\S+)</regex>
-    <order>srcmac</order>
+  <parent>stormshield_decoder</parent>
+  <regex>srcmac=(\S+)</regex>
+  <order>srcmac</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>dst=(\S+)</regex>
-    <order>dst</order>
+  <parent>stormshield_decoder</parent>
+  <regex>dst=(\S+)</regex>
+  <order>dst</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>dstport=(\S+)</regex>
-    <order>dstport</order>
+  <parent>stormshield_decoder</parent>
+  <regex>dstport=(\S+)</regex>
+  <order>dstport</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>dstportname=(\S+)</regex>
-    <order>dstportname</order>
+  <parent>stormshield_decoder</parent>
+  <regex>dstportname=(\S+)</regex>
+  <order>dstportname</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>dstname=(\S+)</regex>
-    <order>dstname</order>
+  <parent>stormshield_decoder</parent>
+  <regex>dstname=(\S+)</regex>
+  <order>dstname</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>dstcontinent="(\.*)"</regex>
-    <order>dstcontinent</order>
+  <parent>stormshield_decoder</parent>
+  <regex>dstcontinent="(\.*)"</regex>
+  <order>dstcontinent</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>dstcountry="(\.*)"</regex>
-    <order>dstcountry</order>
+  <parent>stormshield_decoder</parent>
+  <regex>dstcountry="(\.*)"</regex>
+  <order>dstcountry</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>modsrc=(\S+)</regex>
-    <order>modsrc</order>
+  <parent>stormshield_decoder</parent>
+  <regex>modsrc=(\S+)</regex>
+  <order>modsrc</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>modsrcport=(\S+)</regex>
-    <order>modsrcport</order>
+  <parent>stormshield_decoder</parent>
+  <regex>modsrcport=(\S+)</regex>
+  <order>modsrcport</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>ipv=(\S+)</regex>
-    <order>ipv</order>
+  <parent>stormshield_decoder</parent>
+  <regex>ipv=(\S+)</regex>
+  <order>ipv</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>action=(\S+)</regex>
-    <order>action</order>
+  <parent>stormshield_decoder</parent>
+  <regex>action=(\S+)</regex>
+  <order>action</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-	  <regex type="pcre2">msg=\\?"(.*?)\\?"</regex>
-    <order>msg</order>
+  <parent>stormshield_decoder</parent>
+  <regex type="pcre2">msg=\\?"(.*?)\\?"</regex>
+  <order>msg</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>class=(\S+)</regex>
-    <order>class</order>
+  <parent>stormshield_decoder</parent>
+  <regex>class=(\S+)</regex>
+  <order>class</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>alarmid=(\S+)</regex>
-    <order>alarmid</order>
+  <parent>stormshield_decoder</parent>
+  <regex>alarmid=(\S+)</regex>
+  <order>alarmid</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>target=(\S+)</regex>
-    <order>target</order>
+  <parent>stormshield_decoder</parent>
+  <regex>target=(\S+)</regex>
+  <order>target</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>origdst=(\S+)</regex>
-    <order>origdst</order>
+  <parent>stormshield_decoder</parent>
+  <regex>origdst=(\S+)</regex>
+  <order>origdst</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>origdstport=(\S+)</regex>
-    <order>origdstport</order>
+  <parent>stormshield_decoder</parent>
+  <regex>origdstport=(\S+)</regex>
+  <order>origdstport</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-	  <regex type="pcre2">rt=\\?"(.*?)\\?"</regex>
-    <order>rt</order>
+  <parent>stormshield_decoder</parent>
+  <regex type="pcre2">rt=\\?"(.*?)\\?"</regex>
+  <order>rt</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-	  <regex type="pcre2">rtname=\\?"(.*?)\\?"</regex>
-    <order>rtname</order>
+  <parent>stormshield_decoder</parent>
+  <regex type="pcre2">rtname=\\?"(.*?)\\?"</regex>
+  <order>rtname</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>sent=(\S+)</regex>
-    <order>sent</order>
+  <parent>stormshield_decoder</parent>
+  <regex>sent=(\S+)</regex>
+  <order>sent</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>rcvd=(\S+)</regex>
-    <order>rcvd</order>
+  <parent>stormshield_decoder</parent>
+  <regex>rcvd=(\S+)</regex>
+  <order>rcvd</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>duration=(\S+)</regex>
-    <order>duration</order>
+  <parent>stormshield_decoder</parent>
+  <regex>duration=(\S+)</regex>
+  <order>duration</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>sensible=(\S+)</regex>
-    <order>sensible</order>
+  <parent>stormshield_decoder</parent>
+  <regex>sensible=(\S+)</regex>
+  <order>sensible</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-    <regex>service=(\.*)</regex>
-    <order>service</order>
+  <parent>stormshield_decoder</parent>
+  <regex>service=(\.*)</regex>
+  <order>service</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-	  <regex type="pcre2">totp=\\?"(.*?)\\?"</regex>
-    <order>totp</order>
+  <parent>stormshield_decoder</parent>
+  <regex type="pcre2">totp=\\?"(.*?)\\?"</regex>
+  <order>totp</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-	  <regex type="pcre2">method=\\?"(.*?)\\?"</regex>
-    <order>method</order>
+  <parent>stormshield_decoder</parent>
+  <regex type="pcre2">method=\\?"(.*?)\\?"</regex>
+  <order>method</order>
 </decoder>
 
 <decoder name="stormshield_decoder_1">
-    <parent>stormshield_decoder</parent>
-	  <regex type="pcre2">logtype=\\?"(.*?)\\?"</regex>
-    <order>logtype</order>
+  <parent>stormshield_decoder</parent>
+  <regex type="pcre2">domain=\\?"(.*?)\\?"</regex>
+  <order>domain</order>
+</decoder>
+
+<decoder name="stormshield_decoder_1">
+  <parent>stormshield_decoder</parent>
+  <regex type="pcre2">logtype=\\?"(.*?)\\?"</regex>
+  <order>logtype</order>
 </decoder>
