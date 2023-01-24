@@ -13,53 +13,53 @@
   </rule>
   
   <rule id="300001" level="3">
-	<if_sid>300000</if_sid>
-	<action>pass</action>
-	<description>$(fw) : firewall pass event.</description>
+    <if_sid>300000</if_sid>
+    <action>pass</action>
+    <description>$(fw) : firewall pass event.</description>
   </rule>
   
   <rule id="300002" level="5">
-	<if_sid>300000</if_sid>
-	<action>block</action>
-	<description>$(fw) : firewall block event.</description>
+    <if_sid>300000</if_sid>
+    <action>block</action>
+    <description>$(fw) : firewall block event.</description>
   </rule>
   
   <rule id="300003" level="3">
-	<if_sid>300000</if_sid>
-	<field name="error">0</field>
-	<field name="msg">SYSTEM IDENT</field>
-	<description>$(fw) : Authentication succes.</description>
+    <if_sid>300000</if_sid>
+    <field name="error">0</field>
+    <field name="msg">SYSTEM IDENT</field>
+    <description>$(fw) : Authentication succes.</description>
   </rule>
   
   <rule id="300004" level="5">
-	<if_sid>300000</if_sid>
-	<field name="error">4</field>
-	<field name="msg">Authentication request invalid</field>
-	<description>$(fw) : Authentication failed.</description>
+    <if_sid>300000</if_sid>
+    <field name="error">4</field>
+    <field name="msg">Authentication request invalid</field>
+    <description>$(fw) : Authentication failed.</description>
   </rule>
   
   <rule id="300005" level="5">
-	<if_sid>300000</if_sid>
-	<field name="logtype">server</field>
-	<description>$(fw) : Server events : $(msg)</description>
+    <if_sid>300000</if_sid>
+    <field name="logtype">server</field>
+    <description>$(fw) : Server events : $(msg)</description>
   </rule>
   
   <rule id="300006" level="5">
-	<if_sid>300000</if_sid>
-	<field name="logtype">system</field>
-	<description>$(fw) : System events : $(msg)</description>
+    <if_sid>300000</if_sid>
+    <field name="logtype">system</field>
+    <description>$(fw) : System events : $(msg)</description>
   </rule>
   
   <rule id="300007" level="5">
-	<if_sid>300000</if_sid>
-	<field name="logtype">connection</field>
-	<description>$(fw) : Connection events : $(msg)</description>
+    <if_sid>300000</if_sid>
+    <field name="logtype">connection</field>
+    <description>$(fw) : Connection events : $(msg)</description>
   </rule>
   
   <rule id="300008" level="5">
-	<if_sid>300000</if_sid>
-	<field name="logtype">alarm</field>
-	<description>$(fw) : Alarm events : $(msg)</description>
+    <if_sid>300000</if_sid>
+    <field name="logtype">alarm</field>
+    <description>$(fw) : Alarm events : $(msg)</description>
   </rule>
   
   <rule id="300009" level="12" frequency="3" timeframe="120" ignore="60">
