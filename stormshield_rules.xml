@@ -67,11 +67,5 @@
     <same_field>src</same_field>
     <description>$(fw) : Multiple authentication failed, possible bruteforce attack.</description>
   </rule>
-  
-  <rule id="300010" level="12">
-    <if_matched_sid>300000</if_matched_sid>
-    <list field="data.dst" lookup="not_address_match_key">etc/lists/blacklist-alienvault</list>
-    <description>$(fw) : Trafic to blacklisted (Alienvault) IP detected: $(dst) - possible malware activity</description>
-  </rule>
  
 </group>
