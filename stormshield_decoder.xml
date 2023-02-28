@@ -3,7 +3,7 @@
   Author: Jonathan.G
   Work in progress...
 
-  This program is a free software; you can redistribute it and/or modify it under the terms of GPLv2.
+  This program is a free software; you can redistribute it and/or modify it under the terms of GPLv3.
 -->
 <decoder name="stormshield_decoder">
   <prematch>id=firewall</prematch>
