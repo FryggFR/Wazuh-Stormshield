@@ -5,7 +5,7 @@
 
   This program is a free software; you can redistribute it and/or modify it under the terms of GPLv3.
 -->
-<group name="stormshield">
+<group name="stormshield,">
 
   <rule id="110500" level="0">
     <decoded_as>stormshield_decoder</decoded_as>
@@ -67,8 +67,8 @@
   <rule id="110509" level="12" frequency="3" timeframe="120" ignore="60">
     <if_matched_sid>110504</if_matched_sid>
     <same_field>src</same_field>
-    <description>$(fw) : Multiple authentication failed, possible bruteforce attack. Source : $(src)</description>
+    <description>$(fw) : Multiple authentication failed, possible bruteforce attack. SourceIP : $(src)</description>
     <group>authentication_failed,pci_dss_10.2.4,pci_dss_10.2.5,gdpr_IV_35.7.d,gdpr_IV_32.2,</group>
   </rule>
- 
+  
 </group>
