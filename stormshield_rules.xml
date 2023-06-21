@@ -28,7 +28,7 @@
 	<if_sid>110500</if_sid>
 	<field name="error">0</field>
 	<field name="msg">SYSTEM IDENT</field>
-	<description>$(fw) : Authentication succes.</description>
+	<description>$(fw) : Authentication success.</description>
 	<group>authentication_success,pci_dss_10.2.4,pci_dss_10.2.5,gdpr_IV_35.7.d,gdpr_IV_32.2,</group>
   </rule>
   
