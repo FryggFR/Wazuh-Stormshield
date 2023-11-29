@@ -1,7 +1,7 @@
 # Wazuh
 Simple Wazuh decoder and rules for Stormshield firewall.
 
-You need to redirect all stormshield syslog to your Wazuh manager.
+You need to redirect all stormshield syslog to your Wazuh manager and configure your manager to accept theses log using [remote](https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/remote.html)
 
 # How to use 🛠️
 1) Copy **stormshield_rules.xml** on **/var/ossec/etc/rules**
