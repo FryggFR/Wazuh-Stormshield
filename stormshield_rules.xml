@@ -5,70 +5,91 @@
 
   This program is a free software; you can redistribute it and/or modify it under the terms of GPLv3.
 -->
-<group name="stormshield,">
+<!-- 
+	Stormshield Firewall Ruleset 
+	From 103000 to 103999
+-->
 
-  <rule id="110500" level="0">
+<group name="stormshield,firewall,">
+
+  <rule id="103000" level="0">
     <decoded_as>stormshield_decoder</decoded_as>
     <description>Stormshield grouping rule</description>
   </rule>
   
-  <rule id="110501" level="3">
-    <if_sid>110500</if_sid>
-    <action>pass</action>
-    <description>$(fw) : firewall pass event.</description>
+  <rule id="103001" level="3">
+	<if_sid>103000</if_sid>
+	<action>pass</action>
+	<description>$(fw) : firewall pass event.</description>
+	<!--<group>fw-pass-event,</group>-->
   </rule>
   
-  <rule id="110502" level="5">
-    <if_sid>110500</if_sid>
-    <action>block</action>
-    <description>$(fw) : firewall block event.</description>
+  <rule id="103002" level="3">
+	<if_sid>103000</if_sid>
+	<action>block</action>
+	<description>$(fw) : firewall block event.</description>
+	<!--<group>fw-block-event,</group>-->
   </rule>
   
-  <rule id="110503" level="3">
-    <if_sid>110500</if_sid>
-    <field name="error">0</field>
-    <field name="msg">SYSTEM IDENT</field>
-    <description>$(fw) : Authentication success.</description>
-    <group>authentication_success,pci_dss_10.2.4,pci_dss_10.2.5,gdpr_IV_35.7.d,gdpr_IV_32.2,</group>
+  <rule id="103003" level="3">
+	<if_sid>103000</if_sid>
+	<field name="error">0</field>
+	<field name="msg">SYSTEM IDENT</field>
+	<description>$(fw) : Authentication succes from $(dstuser) with ip $(src)</description>
+	<mitre>
+      <id>T1078</id>
+    </mitre>
+	<group>authentication_success,pci_dss_10.2.4,pci_dss_10.2.5,gdpr_IV_35.7.d,gdpr_IV_32.2,</group>
   </rule>
   
-  <rule id="110504" level="5">
-    <if_sid>110500</if_sid>
-    <field name="error">4</field>
-    <field name="msg">Authentication request invalid</field>
-    <description>$(fw) : Authentication failed.</description>
-    <group>authentication_failed,pci_dss_10.2.4,pci_dss_10.2.5,gdpr_IV_35.7.d,gdpr_IV_32.2,</group>
+  <rule id="103004" level="5">
+	<if_sid>103000</if_sid>
+	<options>alert_by_email</options>
+	<field name="error">4</field>
+	<field name="msg">Authentication request invalid</field>
+	<description>$(fw) : Authentication failed from $(dstuser) with ip $(src)</description>
+	<mitre>
+      <id>T1110</id>
+    </mitre>
+	<group>authentication_failed,pci_dss_10.2.4,pci_dss_10.2.5,gdpr_IV_35.7.d,gdpr_IV_32.2,</group>
   </rule>
   
-  <rule id="110505" level="3">
-    <if_sid>110500</if_sid>
-    <field name="logtype">server</field>
-    <description>$(fw) : Server events : $(msg)</description>
+  <rule id="103005" level="3">
+	<if_sid>103000</if_sid>
+	<field name="logtype">server</field>
+	<description>$(fw) : Server events : $(msg)</description>
   </rule>
   
-  <rule id="110506" level="3">
-    <if_sid>110500</if_sid>
-    <field name="logtype">system</field>
-    <description>$(fw) : System events : $(msg)</description>
+  <rule id="103006" level="3">
+	<if_sid>103000</if_sid>
+	<field name="logtype">system</field>
+	<description>$(fw) : System events : $(msg)</description>
   </rule>
   
-  <rule id="110507" level="3">
-    <if_sid>110500</if_sid>
-    <field name="logtype">connection</field>
-    <description>$(fw) : Connection events : $(msg)</description>
+  <rule id="103007" level="3">
+	<if_sid>103000</if_sid>
+	<field name="logtype">connection</field>
+	<description>$(fw) : Connection events : $(msg)</description>
   </rule>
   
-  <rule id="110508" level="5">
-    <if_sid>110500</if_sid>
-    <field name="logtype">alarm</field>
-    <description>$(fw) : Alarm events : $(msg)</description>
+  <rule id="103008" level="5">
+	<if_sid>103000</if_sid>
+	<field name="logtype">alarm</field>
+	<description>$(fw) : Alarm events : $(msg)</description>
   </rule>
   
-  <rule id="110509" level="12" frequency="3" timeframe="120" ignore="60">
-    <if_matched_sid>110504</if_matched_sid>
+  <rule id="103009" level="12" frequency="3" timeframe="120" ignore="60">
+    <if_matched_sid>103004</if_matched_sid>
     <same_field>src</same_field>
     <description>$(fw) : Multiple authentication failed, possible bruteforce attack. SourceIP : $(src)</description>
     <group>authentication_failed,pci_dss_10.2.4,pci_dss_10.2.5,gdpr_IV_35.7.d,gdpr_IV_32.2,</group>
   </rule>
   
+  <rule id="103010" level="3">
+    <if_sid>103001,103002</if_sid>
+    <field name="dst" type="pcre2">\b(?!(10)|192\.168|172\.(2[0-9]|1[6-9]|3[0-1])|(25[6-9]|2[6-9][0-9]|[3-9][0-9][0-9]|99[1-9]))[0-9]{1,3}\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)</field>
+    <description>$(fw) : Traffic to public IP detected from $(src) to $(origdst) </description>
+    <group>fw-pass-event,</group>
+  </rule>
+ 
 </group>
