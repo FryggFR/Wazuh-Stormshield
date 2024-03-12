@@ -91,5 +91,11 @@
     <description>$(fw) : Traffic to public IP detected from $(src) to $(origdst) </description>
     <group>fw-pass-event,</group>
   </rule>
- 
+
+  <rule id="103011" level="3">
+    <if_sid>103001,103002</if_sid>
+    <field name="dst" type="pcre2" negate="yes">\b(?!(10)|192\.168|172\.(2[0-9]|1[6-9]|3[0-1])|(25[6-9]|2[6-9][0-9]|[3-9][0-9][0-9]|99[1-9]))[0-9]{1,3}\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)</field>
+    <description>$(fw) : Traffic to private IP from $(src) to $(origdst) (origdst) - $(dst) (dst)</description>
+    <group>fw-pass-event,</group>
+  </rule>
 </group>
